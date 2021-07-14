@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  #download gcp sdk cli and install it in such directory
+  - curl https://sdk.cloud.google.com | bash > /dev/null;
+  #source sdk file to modify the shell commands
+  - source $HOME/google-cloud-sdk/path.bash.inc
